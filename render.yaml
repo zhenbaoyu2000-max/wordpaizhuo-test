@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wordpaizhuo-test
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PIN_PEPPER
+        generateValue: true
